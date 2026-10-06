@@ -96,8 +96,8 @@ export default function Dashboard() {
           <NavItem active={activeTab === 'activity'} icon={<Clock size={18}/>} label="Activity" onClick={() => setActiveTab('activity')} />
           <NavItem active={false} icon={<UploadModalIcon size={18}/>} label="Upload" onClick={() => setShowUpload(true)} />
           <div style={{ margin: '1rem 0', borderBottom: '1px solid var(--border-subtle)' }}></div>
-          <NavItem active={false} icon={<PieChart size={18}/>} label="Analytics" />
-          <NavItem active={false} icon={<Bell size={18}/>} label="Notifications" />
+          <NavItem active={activeTab === 'analytics'} icon={<PieChart size={18}/>} label="Analytics" onClick={() => setActiveTab('center')} />
+          <NavItem active={activeTab === 'notifications'} icon={<Bell size={18}/>} label="Notifications" onClick={() => alert('No new notifications at this time.')} />
           <NavItem active={false} icon={<LogOut size={18}/>} label="Logout" onClick={handleSignOut} isDanger />
         </div>
         
